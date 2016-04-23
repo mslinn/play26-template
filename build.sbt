@@ -15,16 +15,17 @@ scalacOptions ++= Seq("-deprecation", "-encoding", "UTF-8", "-feature", "-target
 javacOptions ++= Seq("-Xlint:deprecation", "-Xlint:unchecked", "-source", "1.8", "-target", "1.8", "-g:vars")
 
 libraryDependencies ++= Seq(
-  jdbc,
+  "com.typesafe.play"      %% "play-jdbc"            % "2.5.2" withSources(),
+  "com.typesafe.play"      %% "play-jdbc-evolutions" % "2.5.2" withSources(),
   cache,
   ws,
   evolutions,
   filters,
   json,
-  "com.typesafe.play"      %% "anorm"              % "2.5.0" withSources(),
+  "com.typesafe.play"      %% "anorm"              % "2.5.1" withSources(),
   "com.typesafe.play"      %% "play-ebean"         % "1.0.0" withSources(),
   "com.typesafe.play"      %% "play-mailer"        % "3.0.1" withSources(),
-  "com.typesafe.akka"      %% "akka-slf4j"         % "2.3.9",
+  "com.typesafe.akka"      %% "akka-slf4j"         % "2.4.2",
   "org.webjars"            %% "webjars-play"       % "2.4.0-1",
   "org.webjars"            %  "bootstrap"          % "3.1.1-2",
   "com.github.tototoshi"   %% "slick-joda-mapper"  % "2.0.0" withSources(),
@@ -35,8 +36,8 @@ libraryDependencies ++= Seq(
   "org.webjars"            %  "jquery-ui"          % "1.10.2-1",
   "org.webjars"            %  "jquery-ui-themes"   % "1.10.0",
   //
-  "org.scalatestplus"      %% "play"               % "1.4.0-M3" % "test" withSources(),
-  "junit"                  %  "junit"              % "4.8.1" % "test"
+  "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test,
+  "junit"                  %  "junit"              % "4.8.1" % Test
 )
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
