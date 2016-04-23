@@ -1,0 +1,25 @@
+@(title: String)(content: Html)(implicit request: RequestHeader)
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>@title</title>
+      <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+      <script src='@webjar("jquery.min.js")'></script>
+      <script src='@webjar("bootstrap.min.js")'></script>
+      <link href='@webjar("css/bootstrap.min.css")' rel="stylesheet" />
+      <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+    </head>
+    <body>
+      <header class="jumbotron subhead" id="overview">
+        <div class="container">
+          <img src="@routes.Assets.at("images/play_full_color_123x64.png")" style="float: right; width: 100px; margin-top: 40px;"><h1>@title</h1>
+        </div>
+      </header>
+      <div class="container">
+        @menu(request)
+        <div class="row">
+          @content
+        </div>
+      </div>
+    </body>
+</html>
