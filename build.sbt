@@ -3,14 +3,21 @@ import sbt.Keys._
 
 name         := "changeMe"
 organization := "com.micronautics"
-version      := "0.1.0"
+version      := "0.2.0"
 
 herokuAppName in Compile := "changeMe"
 
 scalaVersion := "2.11.8"
 
-scalacOptions ++= Seq("-deprecation", "-encoding", "UTF-8", "-feature", "-target:jvm-1.8", "-unchecked",
-  "-Ywarn-adapted-args", "-Ywarn-value-discard", "-Xlint")
+scalacOptions ++= Seq(
+  "-deprecation",
+  "-encoding", "UTF-8",
+  "-feature",
+  "-target:jvm-1.8",
+  "-unchecked",
+  "-Ywarn-adapted-args", "-Ywarn-value-discard",
+  "-Xlint"
+)
 
 javacOptions ++= Seq("-Xlint:deprecation", "-Xlint:unchecked", "-source", "1.8", "-target", "1.8", "-g:vars")
 
@@ -75,4 +82,3 @@ logLevel := Level.Warn
 logLevel in test := Level.Info // Level.Info is needed to see detailed output when running tests
 
 logLevel in compile := Level.Warn
-

@@ -1,5 +1,5 @@
 <configuration debug="${LOGGER_DEBUG:-false}">
-  <conversionRule conversionWord="coloredLevel" converterClass="play.api.Logger$ColoredLevel" />
+  <conversionRule conversionWord="coloredLevel" converterClass="play.api.libs.logback.ColoredLevel" />
 
   <appender name="FILE" class="ch.qos.logback.core.FileAppender">
       <!-- Added ":-." to avoid "application.home_IS_UNDEFINED" directory creation -->
