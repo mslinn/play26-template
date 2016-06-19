@@ -3,7 +3,7 @@ import sbt.Keys._
 
 name         := "changeMe"
 organization := "com.micronautics"
-version      := "0.2.0"
+version      := "0.2.1"
 
 herokuAppName in Compile := "changeMe"
 
