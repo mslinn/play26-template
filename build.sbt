@@ -51,10 +51,14 @@ libraryDependencies ++= Seq(
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 enablePlugins(ApiMappings)
 
-javaOptions in Test ++= Seq("-Dconfig.file=conf/dev.conf")
+logLevel := Level.Warn
+logLevel in compile := Level.Warn
+logLevel in test := Level.Info // Level.Info is needed to see detailed output when running tests
+
+javaOptions in Test += "-Dconfig.file=conf/dev.conf"
 logBuffered in Test := false
-Keys.fork in Test := false
-//parallelExecution in Test := false
+fork in Test := true
+parallelExecution in Test := false
 
 resolvers ++= Seq(
   "webjars" at "http://webjars.github.com/m2",
@@ -76,9 +80,3 @@ initialCommands := """import scala.language.postfixOps
                      |import scala.reflect.runtime.universe._
                      |import views.html.helper._
                      |""".stripMargin
-
-logLevel := Level.Warn
-
-logLevel in test := Level.Info // Level.Info is needed to see detailed output when running tests
-
-logLevel in compile := Level.Warn
