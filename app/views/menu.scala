@@ -1,6 +1,6 @@
 package views.html
 
-import controllers.routes.{Application => route}
+import controllers.routes.{ApplicationController => route}
 import play.api.mvc.{Call, RequestHeader}
 import play.twirl.api.Html
 

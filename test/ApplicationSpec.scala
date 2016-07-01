@@ -4,7 +4,7 @@ import org.scalatest._
 import play.test.WithApplication
 
 class ApplicationSpec extends WordSpec with MustMatchers {
-  "Application" should {
+  "ApplicationController" should {
     "send 404 on a bad request" in new WithApplication {
       route(FakeRequest(GET, "/boum")) mustBe None
       ()
