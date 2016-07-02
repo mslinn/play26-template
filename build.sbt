@@ -1,3 +1,7 @@
+// See the [https://scalacourses.com/student/showLecture/84](SBT Global Setup),
+// [https://scalacourses.com/student/showLecture/135](SBT Project Setup) and
+// [https://scalacourses.com/student/showLecture/169](Standard Files and Directories and Improved Template) lectures
+
 import sbt._
 import sbt.Keys._
 

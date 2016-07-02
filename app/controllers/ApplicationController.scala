@@ -1,14 +1,28 @@
 package controllers
 
 import javax.inject._
+import akka.stream.Materializer
 import play.api._
+import play.api.cache.Cached
+import play.api.i18n.MessagesApi
 import play.api.mvc._
+import scala.concurrent.ExecutionContext
 
-/** This is a sample Scaladoc comment with links to [[scala.Option]] and [[play.api.Application]].
-  * Run `sbt doc` or `activator doc` and ScalaDoc will be generated with the root at `target/scala-2.1x/api/index.html`.
-  * Browse to `ApplicationController` to see this ScalaDoc */
+/** The [[https://scalacourses.com/student/showLecture/14 Play 2 Controllers]] lecture discusses this class.
+  * The [[https://scalacourses.com/student/showLecture/249 Using Google Guice for Dependency Injection]] lecture
+  * discusses each of the injected parameters. */
 @Singleton
-class ApplicationController @Inject()(implicit webJarAssets: WebJarAssets) extends Controller {
+class ApplicationController @Inject() ( // order of these explicit parameters does not matter
+//  cached: Cached,
+//  config: Configuration,
+//  val messagesApi: MessagesApi // this parameter must be a property
+)( // order of these implicit parameters does not matter
+  implicit webJarAssets: WebJarAssets
+//  ex: ExecutionContext,
+//  mat: Materializer,
+//  env: Environment
+) extends Controller {
+  // @see https://scalacourses.com/student/showLecture/129
   val Logger = org.slf4j.LoggerFactory.getLogger("application")
 
   def help = Action { implicit request =>

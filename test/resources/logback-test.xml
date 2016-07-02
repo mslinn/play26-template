@@ -1,3 +1,4 @@
+<!-- See https://scalacourses.com/student/showLecture/129 -->
 <configuration debug="false">
   <conversionRule conversionWord="coloredLevel" converterClass="play.api.libs.logback.ColoredLevel" />
 
