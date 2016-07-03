@@ -1,12 +1,15 @@
 package controllers
 
 import javax.inject._
-import akka.stream.Materializer
+//import akka.stream.Materializer
 import play.api._
-import play.api.cache.Cached
+//import play.api.cache.{CacheApi, Cached}
+//import play.api.db.slick.DatabaseConfigProvider
 import play.api.i18n.MessagesApi
+//import play.api.libs.ws.WSClient
 import play.api.mvc._
-import scala.concurrent.ExecutionContext
+//import play.libs.mailer.MailerClient
+//import scala.concurrent.ExecutionContext
 
 /** The [[https://scalacourses.com/student/showLecture/14 Play 2 Controllers]] lecture discusses this class.
   * The [[https://scalacourses.com/student/showLecture/249 Using Google Guice for Dependency Injection]] lecture
@@ -14,13 +17,17 @@ import scala.concurrent.ExecutionContext
 @Singleton
 class ApplicationController @Inject() ( // order of these explicit parameters does not matter
 //  cached: Cached,
+//  cache: CacheApi,
 //  config: Configuration,
-//  val messagesApi: MessagesApi // this parameter must be a property
+//  db: DatabaseConfigProvider,
+//  mailer: MailerClient,
+    val messagesApi: MessagesApi // this parameter must be a property
+//  ws: WSClient
 )( // order of these implicit parameters does not matter
-  implicit webJarAssets: WebJarAssets
+  implicit webJarAssets: WebJarAssets,
 //  ex: ExecutionContext,
 //  mat: Materializer,
-//  env: Environment
+  env: Environment
 ) extends Controller {
   // @see https://scalacourses.com/student/showLecture/129
   val Logger = org.slf4j.LoggerFactory.getLogger("application")
