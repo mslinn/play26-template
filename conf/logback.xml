@@ -1,14 +1,21 @@
-<!-- See https://scalacourses.com/student/showLecture/129 -->
+<!-- See https://scalacourses.com/student/showLecture/129 and https://scalacourses.com/student/showLecture/19-->
 <configuration debug="${LOGGER_DEBUG:-false}">
   <conversionRule conversionWord="coloredLevel" converterClass="play.api.libs.logback.ColoredLevel" />
 
   <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-      <!-- Added ":-." to avoid "application.home_IS_UNDEFINED" directory creation -->
-      <file>${application.home:-.}/logs/application.log</file>
+     <file>${application.home:-.}/logs/application.log</file>
      <encoder>
        <pattern>%date - [%level] - from %logger in %thread %n%message%n%xException%n</pattern>
      </encoder>
    </appender>
+
+  <appender name="CONFIG" class="ch.qos.logback.core.FileAppender">
+      <file>${application.home:-.}/logs/config.log</file>
+      <append>false</append>
+      <encoder>
+        <pattern>%date - [%level] - %logger{36} - %n%message%n%xException%n</pattern>
+      </encoder>
+    </appender>
 
   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
     <encoder>
@@ -25,6 +32,9 @@
        # WARN     YES   YES   YES   YES   NO    NO
        # ERROR    YES   YES   YES   YES   YES   NO
        # See http://logback.qos.ch/manual/architecture.html -->
+  <logger name="akka.actor" level="{LOGGER_AKKA_ACTOR:-INFO}" additivity="false">
+    <appender-ref ref="CONFIG" />
+  </logger>
   <logger name="application"          level="${LOGGER_APP:-WARN}" />
   <logger name="model"                level="${LOGGER_MODEL:-WARN}" />
   <logger name="controllers"          level="${LOGGER_CONTROLLERS:-WARN}" />
