@@ -5,9 +5,9 @@
 import sbt._
 import sbt.Keys._
 
-name         := "changeMe"
+name         := "change-me"
 organization := "com.micronautics"
-version      := "0.2.1"
+version      := "0.2.2"
 
 herokuAppName in Compile := "changeMe"
 
@@ -19,11 +19,22 @@ scalacOptions ++= Seq(
   "-feature",
   "-target:jvm-1.8",
   "-unchecked",
-  "-Ywarn-adapted-args", "-Ywarn-value-discard",
+  "-Ywarn-adapted-args", 
+  "-Ywarn-dead-code",
+  "-Ywarn-numeric-widen",
+  "-Ywarn-unused",
+  "-Ywarn-value-discard",
+  "-Xfuture",
   "-Xlint"
 )
 
-javacOptions ++= Seq("-Xlint:deprecation", "-Xlint:unchecked", "-source", "1.8", "-target", "1.8", "-g:vars")
+javacOptions ++= Seq(
+  "-Xlint:deprecation", 
+  "-Xlint:unchecked", 
+  "-source", "1.8", 
+  "-target", "1.8", 
+  "-g:vars"
+)
 
 libraryDependencies ++= Seq(
   "net.codingwell"         %% "scala-guice"          % "4.0.1",
@@ -39,7 +50,7 @@ libraryDependencies ++= Seq(
 //  "com.typesafe.play"      %% "play-mailer"        % "3.0.1" withSources(),
   "com.typesafe.akka"      %% "akka-slf4j"         % "2.4.7",
   "org.webjars"            %% "webjars-play"       % "2.5.0-2",
-  "org.webjars"            %  "bootstrap"          % "3.3.6",
+  "org.webjars"            %  "bootstrap"          % "3.3.7",
 //  "com.github.tototoshi"   %% "slick-joda-mapper"  % "2.0.0" withSources(),
   "com.typesafe"           %  "config"             % "1.2.1" withSources(),
 //  "com.typesafe.slick"     %% "slick"              % "3.1.1" withSources(),
@@ -85,3 +96,4 @@ initialCommands := """import scala.language.postfixOps
                      |import scala.reflect.runtime.universe._
                      |import views.html.helper._
                      |""".stripMargin
+
