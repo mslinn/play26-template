@@ -47,7 +47,7 @@ libraryDependencies ++= Seq(
 //  json,
 //  "com.typesafe.play"      %% "anorm"              % "2.5.1" withSources(),
 //  "com.typesafe.play"      %% "play-ebean"         % "1.0.0" withSources(),
-//  "com.typesafe.play"      %% "play-mailer"        % "3.0.1" withSources(),
+//  "com.typesafe.play"      %% "play-mailer"        % "5.0.0" withSources(),
   "com.typesafe.akka"      %% "akka-slf4j"         % "2.4.10",
   "org.webjars"            %% "webjars-play"       % "2.5.0-3",
   "org.webjars"            %  "bootstrap"          % "3.3.7",
