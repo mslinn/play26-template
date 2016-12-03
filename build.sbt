@@ -19,7 +19,7 @@ scalacOptions ++= Seq(
   "-feature",
   "-target:jvm-1.8",
   "-unchecked",
-  "-Ywarn-adapted-args", 
+  "-Ywarn-adapted-args",
   "-Ywarn-dead-code",
   "-Ywarn-numeric-widen",
   "-Ywarn-unused",
@@ -29,26 +29,24 @@ scalacOptions ++= Seq(
 )
 
 javacOptions ++= Seq(
-  "-Xlint:deprecation", 
-  "-Xlint:unchecked", 
-  "-source", "1.8", 
-  "-target", "1.8", 
+  "-Xlint:deprecation",
+  "-Xlint:unchecked",
+  "-source", "1.8",
+  "-target", "1.8",
   "-g:vars"
 )
 
 libraryDependencies ++= Seq(
-  "net.codingwell"         %% "scala-guice"          % "4.0.1",
-//  "com.typesafe.play"      %% "play-jdbc"            % "2.5.4" withSources(),
-//  "com.typesafe.play"      %% "play-jdbc-evolutions" % "2.5.4" withSources(),
+//  anorm,
 //  cache,
-//  ws,
 //  evolutions,
 //  filters,
+//  jdbc,
 //  json,
-//  "com.typesafe.play"      %% "anorm"              % "2.5.1" withSources(),
-//  "com.typesafe.play"      %% "play-ebean"         % "1.0.0" withSources(),
+//  ws,
 //  "com.typesafe.play"      %% "play-mailer"        % "5.0.0" withSources(),
   "com.typesafe.akka"      %% "akka-slf4j"         % "2.4.10",
+  "net.codingwell"         %% "scala-guice"        % "4.0.1",
   "org.webjars"            %% "webjars-play"       % "2.5.0-3",
   "org.webjars"            %  "bootstrap"          % "3.3.7",
 //  "com.github.tototoshi"   %% "slick-joda-mapper"  % "2.0.0" withSources(),
