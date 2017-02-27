@@ -45,18 +45,18 @@ libraryDependencies ++= Seq(
 //  json,
 //  ws,
 //  "com.typesafe.play"      %% "play-mailer"        % "5.0.0" withSources(),
-  "com.typesafe.akka"      %% "akka-slf4j"         % "2.4.10",
-  "net.codingwell"         %% "scala-guice"        % "4.0.1",
-  "org.webjars"            %% "webjars-play"       % "2.5.0-3",
-  "org.webjars"            %  "bootstrap"          % "3.3.7",
+  "com.typesafe.akka"      %% "akka-slf4j"         % "2.4.17",
+  "net.codingwell"         %% "scala-guice"        % "4.1.0",
+  "org.webjars"            %% "webjars-play"       % "2.5.0-4",
+  "org.webjars"            %  "bootstrap"          % "3.3.7-1",
 //  "com.github.tototoshi"   %% "slick-joda-mapper"  % "2.0.0" withSources(),
   "com.typesafe"           %  "config"             % "1.3.0" withSources(),
 //  "com.typesafe.slick"     %% "slick"              % "3.1.1" withSources(),
 //  "com.typesafe.play"      %% "play-slick"         % "2.0.2" withSources(),
 //  "postgresql"             %  "postgresql"         % "9.1-901-1.jdbc4" withSources(),
 //  "com.github.nscala-time" %% "nscala-time"        % "2.0.0" withSources(),
-  "org.webjars"            %  "jquery-ui"          % "1.11.4",
-  "org.webjars"            %  "jquery-ui-themes"   % "1.11.4",
+  "org.webjars"            %  "jquery-ui"          % "1.12.1",
+  "org.webjars"            %  "jquery-ui-themes"   % "1.12.1",
   //
   "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test,
   "junit"                  %  "junit"              % "4.12"  % Test
@@ -94,4 +94,3 @@ initialCommands := """import scala.language.postfixOps
                      |import scala.reflect.runtime.universe._
                      |import views.html.helper._
                      |""".stripMargin
-

@@ -9,7 +9,7 @@ resolvers ++= Seq(
 // Comment to get more information during initialization
 //logLevel := Level.Warn
 
-addSbtPlugin("com.typesafe.play" % "sbt-plugin"       % "2.5.11")
+addSbtPlugin("com.typesafe.play" % "sbt-plugin"       % "2.5.12")
 
 // optional plugins
 addSbtPlugin("com.typesafe.sbt"  % "sbt-coffeescript" % "1.0.0")
@@ -24,7 +24,7 @@ addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.0")
 
 addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "4.0.0")
 
-addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.1.8")
+addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.3.0")
 
 addSbtPlugin("de.johoop" % "findbugs4sbt" % "1.4.0")
 

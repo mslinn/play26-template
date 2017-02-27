@@ -30,7 +30,7 @@ class ApplicationController @Inject() ( // order of these explicit parameters do
   env: Environment
 ) extends Controller {
   // @see https://scalacourses.com/student/showLecture/129
-  val Logger = org.slf4j.LoggerFactory.getLogger("application")
+  val Logger: org.slf4j.Logger = org.slf4j.LoggerFactory.getLogger("application")
 
   def help = Action { implicit request =>
     Ok(views.html.play20.welcome("Play Help"))
