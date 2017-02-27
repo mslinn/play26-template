@@ -5,11 +5,11 @@
 import sbt._
 import sbt.Keys._
 
-name         := "change-me"
+name         := "play25-template"
 organization := "com.micronautics"
 version      := "0.2.2"
 
-herokuAppName in Compile := "changeMe"
+herokuAppName in Compile := "play25Template"
 
 scalaVersion := "2.11.8"
 
@@ -54,7 +54,7 @@ libraryDependencies ++= Seq(
 //  "com.typesafe.slick"     %% "slick"              % "3.1.1" withSources(),
 //  "com.typesafe.play"      %% "play-slick"         % "2.0.2" withSources(),
 //  "postgresql"             %  "postgresql"         % "9.1-901-1.jdbc4" withSources(),
-//  "com.github.nscala-time" %% "nscala-time"        % "2.0.0" withSources(),
+//  "com.github.nscala-time" %% "nscala-time"        % "2.16.0" withSources(),
   "org.webjars"            %  "jquery-ui"          % "1.12.1",
   "org.webjars"            %  "jquery-ui-themes"   % "1.12.1",
   //
