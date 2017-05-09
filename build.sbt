@@ -9,7 +9,7 @@ name         := "play25-template"
 organization := "com.micronautics"
 version      := "0.2.2"
 
-herokuAppName in Compile := "play25Template"
+herokuAppName in Compile := "play25-template"
 
 scalaVersion := "2.11.8"
 
