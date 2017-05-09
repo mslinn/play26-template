@@ -18,4 +18,4 @@ publishSite
 
 // sbt-ghpages settings
 enablePlugins(GhpagesPlugin)
-git.remoteRepo := s"git@github.com:mslinn/${ name.value }.git"
+git.remoteRepo := s"git@github.com:mslinn/${ name.value }.git" // TODO change "mslinn" to your GitHub user id
