@@ -11,7 +11,7 @@ version      := "0.2.2"
 
 herokuAppName in Compile := "play25-template" // TODO change "play25-template" to a project name that you like
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.11.11"
 
 scalacOptions ++= Seq(
   "-deprecation",
