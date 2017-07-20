@@ -9,7 +9,7 @@ resolvers ++= Seq(
 // Comment to get more information during initialization
 //logLevel := Level.Warn
 
-addSbtPlugin("com.typesafe.play" % "sbt-plugin"       % "2.5.15")
+addSbtPlugin("com.typesafe.play" % "sbt-plugin"       % "2.5.16")
 
 // optional plugins
 addSbtPlugin("com.typesafe.sbt"  % "sbt-coffeescript" % "1.0.0")
