@@ -14,7 +14,7 @@ lecture discusses this GitHub project in detail.
 ## Using GitHub?
 
 ### GitHub Pages
-`sbtTemplate` sets up the GitHub pages branch for your new project.
+`play26Template` sets up the GitHub pages branch for your new project.
 Before you can use it, edit `build.sbt` and change this line so your GitHub user id and project name are substituted
 for the placeholders `yourGithubId` and `my-new-project`:
 
@@ -31,7 +31,7 @@ The Scaladoc will be available at a URL of the form:
 The Scaladoc for this template project is [here](http://mslinn.github.io/play25-template/latest/api/index.html)
 
 ### Try Hub!
-With `hub` and `sbtTemplate` you can create a new SBT project and a matching GitHub project with only two commands.
+With `hub` and `play26Template` you can create a new SBT project and a matching GitHub project with only two commands.
 The setup documented below will supply your GitHub username and password,
 and will only prompt your for your 2-factor-authentication (2FA) token each time
 you run it if you set up your GitHub account to use 2FA.
@@ -60,10 +60,10 @@ Reload `~/.bash_profile`
 
     $ source `~/.profile`
 
-#### Using sbtTemplate with Hub
+#### Using play26Template with Hub
 Create a new SBT project and create a new GitHub project, which `hub` automatically adds as a `git` `remote`:
 
-    $ sbtTemplate bigBadProject
+    $ play26Template bigBadProject
     $ git create -d "Project description"
     two-factor authentication code: 881078
     Updating origin

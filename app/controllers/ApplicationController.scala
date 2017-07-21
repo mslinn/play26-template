@@ -21,19 +21,20 @@ class ApplicationController @Inject() ( // order of these explicit parameters do
 //  config: Configuration,
 //  db: DatabaseConfigProvider,
 //  mailer: MailerClient,
-    val messagesApi: MessagesApi // this parameter must be a property
+    override val messagesApi: MessagesApi // this parameter must be a property
 //  ws: WSClient
-)( // order of these implicit parameters does not matter
-  implicit webJarAssets: WebJarAssets,
+)(implicit   // order of these implicit parameters does not matter
+  assets: Assets,
 //  ex: ExecutionContext,
 //  mat: Materializer,
-  env: Environment
-) extends Controller {
+  env: Environment,
+  webJarAssets: WebJarAssets
+) extends InjectedController {
   // @see https://scalacourses.com/student/showLecture/129
   val Logger: org.slf4j.Logger = org.slf4j.LoggerFactory.getLogger("application")
 
   def help = Action { implicit request =>
-    Ok(views.html.play20.welcome("Play Help"))
+    Ok(views.html.welcome("Play Help"))
   }
 
   def hello(name: String) = Action { implicit request =>

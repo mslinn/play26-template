@@ -41,13 +41,14 @@ libraryDependencies ++= Seq(
 //  cache,
 //  evolutions,
 //  filters,
+  guice,
 //  jdbc,
 //  json,
 //  ws,
 //  "com.typesafe.play"      %% "play-mailer"        % "5.0.0" withSources(),
-  "com.typesafe.akka"      %% "akka-slf4j"         % "2.4.17",
+  "com.typesafe.akka"      %% "akka-slf4j"         % "2.5.3",
   "net.codingwell"         %% "scala-guice"        % "4.1.0",
-  "org.webjars"            %% "webjars-play"       % "2.5.0-4",
+  "org.webjars"            %% "webjars-play"       % "2.6.1",
   "org.webjars"            %  "bootstrap"          % "3.3.7-1",
 //  "com.github.tototoshi"   %% "slick-joda-mapper"  % "2.0.0" withSources(),
   "com.typesafe"           %  "config"             % "1.3.0" withSources(),
@@ -58,7 +59,7 @@ libraryDependencies ++= Seq(
   "org.webjars"            %  "jquery-ui"          % "1.12.1",
   "org.webjars"            %  "jquery-ui-themes"   % "1.12.1",
   //
-  "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test,
+  "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.0" % Test,
   "junit"                  %  "junit"              % "4.12"  % Test
 )
 
