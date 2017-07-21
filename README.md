@@ -1,9 +1,9 @@
-# play25Template
+# play26Template
 
-[![Build Status](https://travis-ci.org/mslinn/play25template.svg?branch=master)](https://travis-ci.org/mslinn/play25template)
-[![GitHub version](https://badge.fury.io/gh/mslinn%2Fplay25Template.svg)](https://badge.fury.io/gh/mslinn%2Fplay25Template)
+[![Build Status](https://travis-ci.org/mslinn/play26template.svg?branch=master)](https://travis-ci.org/mslinn/play26template)
+[![GitHub version](https://badge.fury.io/gh/mslinn%2Fplay26Template.svg)](https://badge.fury.io/gh/mslinn%2Fplay256emplate)
 
-Template for Play 2.5.x projects, including all official Play Framework dependencies,
+Template for Play 2.6.x projects, including all official Play Framework dependencies,
 WebJars, JQuery and Bootstrap. Dependency injection is used throughout.
 A Bootstrap view template is provided, and a plain HTML view template is provided.
 
@@ -15,15 +15,15 @@ lecture discusses this GitHub project in detail.
 
 ### GitHub Pages
 `sbtTemplate` sets up the GitHub pages branch for your new project.
-Before you can use it, edit `build.sbt` and change this line so your GitHub user id and project name are substituted 
+Before you can use it, edit `build.sbt` and change this line so your GitHub user id and project name are substituted
 for the placeholders `yourGithubId` and `my-new-project`:
 
     git.remoteRepo := "git@github.com:yourGithubId/my-new-project.git"
-    
+
 Now you can publish the Scaladoc for your project with this command:
 
     sbt ";doc ;ghpagesPushSite"
-    
+
 The Scaladoc will be available at a URL of the form:
 
     http://yourGithubId.github.io/my-new-project/latest/api/index.html
