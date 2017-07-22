@@ -13,7 +13,7 @@ object menu {
     if (uri==request.uri) s"""<li class="active"><a href="#">$linkText</a></li>""" else s"""<li><a href="$uri">$linkText</a></li>"""
   }
 
-  def apply(implicit assets: Assets, request: RequestHeader) =
+  def apply()(implicit assets: Assets, request: RequestHeader): Html =
     Html(s"""<nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
             |  <ul class="nav navbar-nav">
             |    ${ listItem(AppRoutes.hello("Everybody"), "Welcome") }
