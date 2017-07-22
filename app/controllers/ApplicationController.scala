@@ -25,7 +25,7 @@ class ApplicationController @Inject() ( // order of these explicit parameters do
     override val messagesApi: MessagesApi // this parameter must be a property
 //  ws: WSClient
 )(implicit   // order of these implicit parameters does not matter
-  assets: Assets,
+  assets: AssetsFinder,
 //  ex: ExecutionContext,
 //  mat: Materializer,
   env: Environment,
