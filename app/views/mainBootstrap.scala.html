@@ -1,13 +1,14 @@
 @* See the [[https://scalacourses.com/student/showLecture/15 Twirl View Templates]] lecture. *@
-@(title: String)(content: Html)(implicit assets: Assets, request: RequestHeader, webJarAssets: WebJarAssets)
+@import org.webjars.play.WebJarsUtil
+@(title: String)(content: Html)(implicit assets: Assets, request: RequestHeader, webJarsUtil: WebJarsUtil)
 <!DOCTYPE html>
 <html>
     <head>
       <title>@title</title>
       <link rel="shortcut icon" type="image/png" href="@assets.at("images/favicon.png")">
-      <script src='@webjar("jquery.min.js")'></script>
-      <script src='@webjar("bootstrap.min.js")'></script>
-      <link href='@webjar("css/bootstrap.min.css")' rel="stylesheet" />
+      <script src='@webJarsUtil.url("jquery.min.js")'></script>
+      <script src='@webJarsUtil.url("bootstrap.min.js")'></script>
+      <link href='@webJarsUtil.url("css/bootstrap.min.css")' rel="stylesheet" />
       <link rel="stylesheet" media="screen" href="@assets.at("stylesheets/main.css")">
     </head>
     <body>

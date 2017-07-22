@@ -1,6 +1,7 @@
 package controllers
 
 import javax.inject._
+import org.webjars.play.WebJarsUtil
 //import akka.stream.Materializer
 import play.api._
 //import play.api.cache.{CacheApi, Cached}
@@ -28,7 +29,7 @@ class ApplicationController @Inject() ( // order of these explicit parameters do
 //  ex: ExecutionContext,
 //  mat: Materializer,
   env: Environment,
-  webJarAssets: WebJarAssets
+  webJarsUtil: WebJarsUtil
 ) extends InjectedController {
   // @see https://scalacourses.com/student/showLecture/129
   val Logger: org.slf4j.Logger = org.slf4j.LoggerFactory.getLogger("application")

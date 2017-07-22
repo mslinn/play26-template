@@ -1,3 +1,4 @@
 @* See the [[https://scalacourses.com/student/showLecture/15 Twirl View Templates]] lecture. *@
-@(name: String)(implicit assets: Assets, request: RequestHeader, webJarAssets: WebJarAssets)
+@import org.webjars.play.WebJarsUtil
+@(name: String)(implicit assets: Assets, request: RequestHeader, webJarsUtil: WebJarsUtil)
 @mainBootstrap(s"Hello, $name!")(Html(s"""<p>It's so good to see you, $name!</p>"""))
