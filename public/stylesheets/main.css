@@ -46,6 +46,15 @@ input[type=text] {
   color: #CBBE36;
 }
 
+.navbar-right {
+  margin-right: 0.5em;
+}
+
+.right {
+  float: right;
+  margin-right: 1em;
+}
+
 .text-success {
   padding: 5pt;
   color: black;

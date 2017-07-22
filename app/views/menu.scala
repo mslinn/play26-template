@@ -19,6 +19,9 @@ object menu {
             |    ${ listItem(AppRoutes.hello("Everybody"), "Welcome") }
             |    ${ listItem(AppRoutes.help(), "Help") }
             |  </ul>
+            |  <ul class="nav navbar-nav navbar-right">
+            |    ${ listItem(Call("GET", "https://github.com/mslinn/play26-template"), "GitHub")}
+            |  </ul>
             |  <ul class="nav navbar-nav">
             |  </ul>
             |</nav>""".stripMargin)
