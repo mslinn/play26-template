@@ -1,4 +1,4 @@
-# play26Template
+# Play Framework 2.6 Template
 
 [![License](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/share-your-work/public-domain/cc0/)
 [![Build Status](https://travis-ci.org/mslinn/play26template.svg?branch=master)](https://travis-ci.org/mslinn/play26template)
