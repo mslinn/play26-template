@@ -4,8 +4,8 @@
 [![Build Status](https://travis-ci.org/mslinn/play26template.svg?branch=master)](https://travis-ci.org/mslinn/play26template)
 [![GitHub version](https://badge.fury.io/gh/mslinn%2Fplay26Template.svg)](https://badge.fury.io/gh/mslinn%2Fplay256emplate)
 
-Template for Play 2.6.x projects, including all official Play Framework dependencies,
-WebJars, JQuery and Bootstrap. Dependency injection is used throughout.
+Template for Play 2.6.x projects, using Scala 2.12, including all official Play Framework dependencies,
+JQuery and Bootstrap. Dependency injection is used throughout.
 A Bootstrap view template is provided, and a plain HTML view template is provided.
 
 Links to the appropriate ScalaCourses.com lectures are provided in each file.

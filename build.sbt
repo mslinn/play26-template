@@ -7,11 +7,11 @@ import sbt.Keys._
 
 name         := "play26-template" // TODO change "play26-template" to a project name that you like
 organization := "com.micronautics"
-version      := "0.2.2"
+version      := "0.3.0"
 
 herokuAppName in Compile := "play26-template" // TODO change "play26-template" to a project name that you like
 
-scalaVersion := "2.11.11"
+scalaVersion := "2.12.3"
 
 scalacOptions ++= Seq(
   "-deprecation",
@@ -46,20 +46,19 @@ libraryDependencies ++= Seq(
 //  json,
 //  ws,
 //  "com.typesafe.play"      %% "play-mailer"        % "5.0.0" withSources(),
-  "com.typesafe.akka"      %% "akka-slf4j"         % "2.5.3",
+  "com.typesafe.akka"      %% "akka-slf4j"         % "2.5.6",
   "net.codingwell"         %% "scala-guice"        % "4.1.0",
-  "org.webjars"            %% "webjars-play"       % "2.6.1",
+  "org.webjars"            %% "webjars-play"       % "2.6.2",
   "org.webjars"            %  "bootstrap"          % "3.3.7-1",
 //  "com.github.tototoshi"   %% "slick-joda-mapper"  % "2.0.0" withSources(),
-  "com.typesafe"           %  "config"             % "1.3.0" withSources(),
-//  "com.typesafe.slick"     %% "slick"              % "3.1.1" withSources(),
-//  "com.typesafe.play"      %% "play-slick"         % "2.0.2" withSources(),
-//  "postgresql"             %  "postgresql"         % "9.1-901-1.jdbc4" withSources(),
-//  "com.github.nscala-time" %% "nscala-time"        % "2.16.0" withSources(),
+  "com.typesafe"           %  "config"             % "1.3.1" withSources(),
+//  "com.typesafe.slick"     %% "slick"              % "3.2.1" withSources(),
+//  "com.typesafe.play"      %% "play-slick"         % "3.0.2" withSources(),
+//  "org.postgresql"         % "postgresql"          % "42.1.4" withSources(),
   "org.webjars"            %  "jquery-ui"          % "1.12.1",
   "org.webjars"            %  "jquery-ui-themes"   % "1.12.1",
   //
-  "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.0" % Test,
+  "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
   "junit"                  %  "junit"              % "4.12"  % Test
 )
 
