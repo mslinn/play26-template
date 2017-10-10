@@ -2,6 +2,7 @@ package views.html
 
 import controllers.AssetsFinder
 import controllers.routes.{ApplicationController => AppRoutes}
+import controllers.routes.{PathController => PathRoutes}
 import play.api.mvc.{Call, RequestHeader}
 import play.twirl.api.Html
 
@@ -18,6 +19,7 @@ object menu {
             |  <ul class="nav navbar-nav">
             |    ${ listItem(AppRoutes.hello("Everybody"), "Welcome") }
             |    ${ listItem(AppRoutes.help(), "Help") }
+            |    ${ listItem(PathRoutes.index, "Routes") }
             |  </ul>
             |  <ul class="nav navbar-nav navbar-right">
             |    ${ listItem(Call("GET", "https://github.com/mslinn/play26-template"), "GitHub")}
