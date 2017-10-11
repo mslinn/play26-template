@@ -28,7 +28,7 @@ class ApplicationController @Inject() ( // order of these explicit parameters do
   assets: AssetsFinder,
 //  ex: ExecutionContext,
 //  mat: Materializer,
-  env: Environment,
+//  env: Environment,
   webJarsUtil: WebJarsUtil
 ) extends InjectedController {
   // @see https://scalacourses.com/student/showLecture/129
