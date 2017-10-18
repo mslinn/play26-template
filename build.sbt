@@ -71,7 +71,7 @@ logLevel in test := Level.Info // Level.Info is needed to see detailed output wh
 
 javaOptions in Test += "-Dconfig.file=conf/dev.conf"
 logBuffered in Test := false
-fork in Test := true
+fork in Test := true   // disable this if you want IntelliJ IDEA to honor breakpoints when tests are launched via SBT tasks
 parallelExecution in Test := false
 
 resolvers ++= Seq(
